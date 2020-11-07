@@ -74,8 +74,6 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'jquery-rails'
 gem 'fog-aws'
-gem 'dotenv-rails'
-gem 'recaptcha',  require: "recaptcha/rails"
 
 
 group :production do
