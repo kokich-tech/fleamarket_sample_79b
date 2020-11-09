@@ -8,4 +8,5 @@ class BuyersController < ApplicationController
   def deliverry
     @user = User.new
   end
+
 end
