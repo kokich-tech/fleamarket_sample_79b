@@ -1,0 +1,55 @@
+.delivery
+  =render "header"
+  .main
+    .container
+      .title 発送元・お届け先住所入力
+      .content
+        = form_with model:@user do |f|
+          .form-group
+            =f.label :お名前
+            %span.form-group__require 必須
+            =f.text_field :family_name, placeholder: "例)天気", class:"form-group__input"
+            =f.text_field :first_name,placeholder: "例)晴",class:"form-group__input"
+            
+          .form-group
+            =f.label :お名前カナ
+            %span.form-group__require 必須
+            =f.text_field :family_name, placeholder: "例)テンキ", class:"form-group__input"
+            =f.text_field :first_name, placeholder: "例)ハレ", class:"form-group__input"
+
+          .form-group
+            =f.label :郵便番号
+            %span.form-group__require 必須
+            =f.text_field :post_code, autofocus:true, placeholder:"例）123-4567", class:"form-group__input", pattern:"\d{3}-\d{4}"
+           
+          .form-group
+            =f.label :都道府県
+            %span.form-group__require 必須
+           
+          .form-group
+            =f.label :市区町村
+            %span.form-group__require 必須
+            =f.text_field :city, placeholder: "例)北区", class:"form-group__input"
+
+          .form-group
+            =f.label :番地
+            %span.form-group__require 必須
+            =f.text_field :address, placeholder: "例)1-1-1", class:"form-group__input"
+
+          .form-group
+            =f.label :建物
+            %span.form-group__require 任意
+            =f.text_field :apartment, placeholder: "例)北101", class:"form-group__input"
+
+          .form-group
+            =f.label :電話番号
+            %span.form-group__require 任意
+            =f.telephone_field :number, placeholder: "例)010020030", class:"form-group__input"
+
+          .form-group
+            =button_to '登録する', '/', class:'form-group__input'
+  
+  =render "footer"
+
+
+

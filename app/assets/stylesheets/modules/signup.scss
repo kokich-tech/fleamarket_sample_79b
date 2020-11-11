@@ -1,0 +1,142 @@
+.signup{
+  text-align: center;
+  background: #f5f5f5;
+  padding: 0 0 250px;
+  width: 100vw;
+  height: 100vh;
+  .header {
+    background-repeat: no-repeat;
+    height: 128px;
+    .image{
+      padding-top: 30px;
+    }
+  }
+  .main{
+    display: block;
+    &__registration{
+      width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      &--name {
+        font-size: 25px;
+        padding: 20px 30px;
+        border-bottom: 1px solid #f5f5f5;
+      }
+      &__sns {
+        padding: 24px 16px 40px;
+        position: relative;
+          
+        .mail {
+          padding: 15px 100px;
+          margin-bottom: 30px;
+          background-color:#ea352d;
+          border: 1px #ea352d;
+          color:#fff;
+          font-size: 20px;
+          border-radius: 4px;
+          cursor: pointer;
+          .icon {
+            position: absolute;
+            left: 200px;
+            top: 45px;
+            font-size: 25px;
+          }
+        }
+        .google {
+          padding: 15px 139px;
+          margin-bottom: 30px;
+          background-color:#fff;
+          border: 1px solid #333333;
+          color: #333333;
+          font-size: 20px;
+          border-radius: 4px;
+          cursor: pointer;
+          .icon {
+            position: absolute;
+            left: 200px;
+            top: 135px;
+            font-size: 25px;
+            color: #000000;
+          }
+        }
+        .facebook {
+          padding: 15px 128px;
+          margin-bottom: 30px;
+          background-color:#fff;
+          color: #385185;
+          font-size: 20px;
+          border-radius: 4px;
+          cursor: pointer;
+          .icon {
+            position: absolute;
+            left: 200px;
+            top: 135px;
+            font-size: 25px;
+            color: aqua;
+          }
+        }
+        .facebook {
+          padding: 15px 128px;
+          margin-bottom: 30px;
+          background-color:#385185;
+          color: #fff;
+          font-size: 20px;
+          border-radius: 4px;
+          border: 1px solid #385185;
+          cursor: pointer;
+          .icon {
+            position: absolute;
+            left: 200px;
+            top: 225px;
+            font-size: 25px;
+            color:#fff;
+          }
+        }
+        .apple {
+          padding: 15px 148px;
+          margin-bottom: 30px;
+          background-color:#000000;
+          border: 1px solid #000000;
+          color: #fff;
+          font-size: 20px;
+          border-radius: 4px;
+          cursor: pointer;
+          .icon {
+            position: absolute;
+            left: 200px;
+            top: 315px;
+            font-size: 25px;
+            color:#fff;
+          }
+        }
+      }
+      &__group {
+        text-align: left;
+        margin-left: 170px;
+        padding-bottom:40px;
+        color: #88888888;
+        a {
+          color: #0099e8;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .footer {
+    padding: 50px 20px;
+    
+    &__box {
+      list-style: none;
+        a{
+          text-decoration: none;
+          color: #333333;
+          padding: 0 10px;
+        }
+        .image{
+          display: block;
+          margin: 0 auto;
+          padding-top: 30px;
+        }
+    }
+  }
+}

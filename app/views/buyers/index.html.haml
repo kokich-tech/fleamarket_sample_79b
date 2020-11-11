@@ -1,0 +1,36 @@
+.buyer
+  =render "header"
+  .main
+    .main__inner
+      .main__inner__purchase 購入内容の確認
+      .main__inner__product
+        .main__inner__product__image
+          =image_tag 'icon-02.png', size: '150x150', class:'photo'
+        .main__inner__product__contents
+          .main__inner__product__contents__detaill Tシャツ今なら２０％OFF
+          .main__inner__product__contents__price
+            .main__inner__product__contents__price__tax-included 送料込み(税込み)
+            .main__inner__product__contents__price__sum ¥1,100
+      .main__inner__payment
+        .main__inner__payment__top
+          .main__inner__payment__top__total 支払い金額
+          .main__inner__payment__top__sum ¥1100
+      .main__inner__paymet-type
+        .main__inner__paymet-type__box
+        支払方法
+        =link_to '登録してください', '/',class:'paymet-type__btn'
+      .main__inner__shipping-address
+        .main__inner__shipping-address__box  
+        配送先
+        =link_to '登録してください', '/', class:'shipping-address__btn'
+      .main__inner__to-buy
+        %p.main__inner__to-buy__text
+        配送先と支払方法の入力を完了してください。
+        =button_to '購入する','/', class:'to-buy__btn'
+  =render "footer"
+
+    
+
+
+
+

@@ -1,0 +1,49 @@
+.login
+  .header
+    =image_tag 'logo.png', size: '50x50',class:'image'
+  .login__main
+    .login__main__content
+      .login__main__content__no-account
+        .login__main__content__no-account__text アカウントをお持ちでない方はこちら
+        .login__main__content__no-account__btn
+          = button_to '新規会員登録','/', class: ' new-btn'
+          
+      .login__main__content__sns-account
+        .login__main__content__sns-account__btn1
+          = button_to '/' , class:'google' do
+            = icon('fab', 'google',  class: 'icon' )
+            Googleでログイン
+            
+        .login__main__content__sns-account__btn2
+          =button_to '/', class:'facebook' do
+            = icon('fab', 'facebook',  class: 'icon')
+            Facebookでログイン
+        .login__main__content__sns-account__btn3
+          = button_to '/', class:'apple' do
+            = icon('fab', 'apple',  class: 'icon')
+            Appleでログイン
+      .login__main__content__form
+        = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+          = f.email_field :email, autofocus: true, autocomplete: 'email', placeholder: 'メールアドレス'
+          = f.password_field :password, autocomplete: 'current-password', placeholder: 'パスワード'
+          = recaptcha_tags
+          .login__main__content__form__box
+            = button_to '/', class:'action' do
+              ログイン
+          .login__main__content__form__buttom
+            = link_to '/', class:'forget' do
+              パスワードをお忘れの方
+
+  .login__footer 
+    %li.login__footer__box
+      %ul.login__footer__box__list
+        =link_to '/' do
+          プライバシーポリシー
+        =link_to '/' do
+          フリマ利用規約
+        =link_to '/' do
+          特定商取引に関する表記
+          =link_to '/' do
+            = image_tag 'logo-white.png', size: '130x50',class:'image'
+    %p© Mercari, Inc
+    

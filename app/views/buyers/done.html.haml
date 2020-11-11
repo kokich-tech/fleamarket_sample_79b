@@ -1,0 +1,23 @@
+.buy
+  =render "header"
+  .main
+    .main__inner
+      .main__inner__head
+        = icon('far', 'clock',  class: 'icon' )
+        発送をお待ちください
+      .main__inner__title 購入が完了しました
+
+      .main__inner__product
+        .main__inner__product__image
+          = image_tag 'icon-02.png', size: '150x150' ,class:'photo'
+        .main__inner__product__box
+          .main__inner__product__box__deatail 商品詳細の記入欄です
+          .main__inner__product__box__price
+            .main__inner__product__box__price__included 送料込み(税込み)
+            .main__inner__product__box__price__sum ¥ 1100
+      .main__inner__payment
+        .main__inner__payment__total 支払金額
+        .main__inner__payment__sum ¥1100
+      .main__inner__top-page
+        =button_to 'トップページに戻る', '/', class:'btn'
+  =render "footer"
