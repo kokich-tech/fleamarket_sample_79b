@@ -25,6 +25,7 @@
 
         %li.listsFrameRight__item
         - if user_signed_in?
+          = link_to "商品出品", new_item_path
           = link_to "ログアウト", destroy_user_session_path, method: :delete
           = link_to "マイページ", users_path
         - else
