@@ -61,6 +61,10 @@
         flex-direction: column;
         display: flex;
         text-align: left;
+        &__update {
+          display: flex;
+          justify-content: flex-end;
+        }
         .paymet-type__btn {
           color: #0095ee;
           text-decoration: none;

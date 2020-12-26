@@ -12,7 +12,6 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.integer :price, null: false
       t.string  :brand_id
       t.string :trading_status
-      t.references  :user
       t.integer :category_id, null: false
       t.timestamps
     end

@@ -38,16 +38,7 @@
           font-size:  15px;
           padding: 0 5px;
         }
-        &__photo{
-        li {
-          padding: 17px 0 16px;
-          width: 100%;
-          max-width: 1040px;
-          font-size: 14px;
-          margin: 0 auto;
-          list-style: none;
-          }
-        }
+        
         &__price {
           display: flex;
           justify-content: center;
@@ -73,29 +64,6 @@
           margin: 0 auto;
           cursor: pointer;
           border: 1px solid #ff0211;
-          width: 100%;
-          border-radius: 10px;
-        }
-        &__edit{
-          background-color: gray;
-          color:  #fff;
-          font-weight: bold;
-          font-size: 30px;
-          margin: 0 auto;
-          cursor: pointer;
-          border: 1px solid gray;
-          width: 100%;
-          border-radius: 10px;
-          margin-bottom: 10px;
-        }
-        &__delete{
-          background-color: orange;
-          color:  #fff;
-          font-weight: bold;
-          font-size: 30px;
-          margin: 0 auto;
-          cursor: pointer;
-          border: 1px solid orange;
           width: 100%;
           border-radius: 10px;
         }
@@ -125,8 +93,7 @@
       width: 700px;
       padding: 30px;
       text-align: left;
-      &__comment{
-      }
+      
       textarea {
         resize: none;
         width:100%;

@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2020_12_19_121540) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "postal_code"
-    t.string "prefecture"
+    t.integer "prefecture"
     t.text "city"
     t.text "house_number"
     t.text "building"
@@ -28,6 +28,15 @@ ActiveRecord::Schema.define(version: 2020_12_19_121540) do
     t.string "name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "buyers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "item_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["item_id"], name: "index_buyers_on_item_id"
+    t.index ["user_id"], name: "index_buyers_on_user_id"
   end
 
   create_table "cards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -91,5 +100,7 @@ ActiveRecord::Schema.define(version: 2020_12_19_121540) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "buyers", "items"
+  add_foreign_key "buyers", "users"
   add_foreign_key "item_images", "items"
 end
