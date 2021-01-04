@@ -39,18 +39,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
 
       t.timestamps null: false
     end
-    def change
-      create_table :addresses do |t|
-        t.integer :postal_code
-        t.string :prefecture
-        t.text :city
-        t.text :house_number
-        t.text :building
-        t.integer :telephone
-        t.timestamps
-        t.integer :user_id
-      end
-    end
 
     add_index :users, :email,                unique: true
     add_index :users, :reset_password_token, unique: true
