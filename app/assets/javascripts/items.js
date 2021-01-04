@@ -12,6 +12,10 @@ $(function(){
 
       
   $('.box__file__field').on('click', function(){
+<<<<<<< HEAD
+=======
+    console.log(1)
+>>>>>>> parent of 07f0f08... Merge pull request #24 from kokich-tech/複数枚投稿保存機能作成
     const fileField = $('input[type="file"]:last');
     fileField.trigger('click');
   })
