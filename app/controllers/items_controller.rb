@@ -61,7 +61,7 @@ class ItemsController < ApplicationController
   private
 
     def item_params
-       params.require(:item).permit(:name, :item_description,  :brand_id, :category_id, :size_id, :item_condition_id, :postage_type_id, :postage_payer_id, :prefecture_id, :estimated_shipping_date_id, :price, item_images_attributes: [:id, :src, :_destroy]).merge(user_id: current_user.id,trading_status:"出品中")
+       params.require(:item).permit(:name, :item_description,  :brand_id, :category_id, :size_id, :item_condition_id, :postage_type_id, :postage_payer_id, :prefecture_id, :estimated_shipping_date_id, :price, item_images_attributes: [:src]).merge(user_id: current_user.id,trading_status:"出品中")
     end
 
     def set_item
@@ -69,3 +69,5 @@ class ItemsController < ApplicationController
     end
 
   end
+
+

@@ -1,8 +1,139 @@
+// .mypage-wrapper {
+//   $base-blue: #3CCACE;
+//   $base-black: #333;
+//   $table-border-color: #dedede;
+
+// }
+// /* プロフィール */
+// .mypage {
+//   height: 1000px;
+//   width: 100%;
+  
+//   background-color: #f8f8f8;
+//   $base-blue: #3CCACE;
+//   $base-black: #333;
+//   $table-border-color: #dedede;
+
+ 
+
+
+//   .mymain {
+//     height: 1000px;
+//     padding: 50px 0;
+//     position: relative;
+//     .myleft {
+//       height: calc(100% - 10%);
+//       width: calc(100% - 75%);
+//       padding: 0 30px;
+//       float: left;
+//       ul {
+//         height: auto;
+//         width: 100%;
+//         background-color: white;
+        
+//         li {
+//           height: 50px;
+//           width: 95%;
+//           line-height: 50px;
+//           padding: 0 10px;
+//           border: 1px solid #f8f8f8;
+//           font-size: 14px;
+          
+//           cursor: pointer;
+//           a {
+//             position: relative;
+//             text-decoration: none;
+//             color: black;
+//           }
+//           .icon-possition {
+//             color: #b6b5b5bb;
+//             float: right;
+//             line-height: 50px;
+//             padding-right: 6px;
+//           }
+//         }
+//       }
+//       h3 {
+//         font-weight: bold;
+//         padding-top: 50px;
+//         padding-bottom: 5px;
+//         background-color: #f8f8f8;
+//       }
+//     }
+//     .myright {
+//       height: calc(100% - 10%);
+//       width: calc(100% - 30%);
+//       background-color:white;
+//       float: right;
+//       p {
+//         height: 50px;
+//         line-height: 50px;
+//         font-size: 20px;
+//         text-align: center;
+//         font-weight: bold;
+//         padding-top: 20px;
+//       }
+//       .right-top {
+//         height: 300px;
+//         &__bg-mask {
+//           height: 100%;
+//           background: rgba(255,255,255,0.5);
+//           padding-top: 20px;
+//           &--avatar {
+//             height: 200px;
+//             width: 200px;
+//             background-image: image-url('icon-01.png');
+//             background-size: cover;
+//             background-color: white;
+//             border-radius: 100px;
+//             margin: auto;
+//             border: 1px solid #f8f8f8;
+//           }
+//           &--nickname {
+//             width: 50%;
+//             background-color: white;
+//             margin: 10px auto;
+//             border-radius: 50px;
+//             border: 1px solid #f8f8f8;
+//           }
+//         }
+//       }
+//       .preface {
+//         padding: 20px;
+//         text-align: center;
+//         textarea {
+//           width: 750px;
+//           min-height: 300px;
+//           padding: 10px;
+//           margin-top: 10px;
+//           display: inline-block;
+//         }
+//       }
+//       .change-btn {
+//         width: auto;
+//         padding: 0 20%;
+//         text-align: center;
+//         button {
+//           display: inline-block;
+//           font-size: 18px;
+//           margin-top: 20px;
+//           line-height: 48px;
+//           background: $base-blue;
+//           border: 1px solid $base-blue;
+//           color: white;
+//           width: 250px;
+//           font-size: 18px;
+//           border-radius: 100px;
+//           cursor: pointer;
+//         }
+//       }
+//     }
+//   }
+// }
 .mypage-wrapper {
   $base-blue: #3CCACE;
   $base-black: #333;
   $table-border-color: #dedede;
-
 }
 /* プロフィール */
 .mypage {
@@ -13,10 +144,7 @@
   $base-blue: #3CCACE;
   $base-black: #333;
   $table-border-color: #dedede;
-
  
-
-
   .mymain {
     height: 1000px;
     padding: 50px 0;
@@ -129,8 +257,6 @@
       }
     }
   }
-}
-
 /* 新規登録 */
 .single-container{
   .single-header {
@@ -638,4 +764,5 @@
       }
     }
   }
+}
 }
