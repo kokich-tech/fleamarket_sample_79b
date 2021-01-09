@@ -7,16 +7,11 @@
       .product-main__inner__box
         .product-main__inner__box__photo
           = image_tag "#{@item.item_images[0].src}",size: "250x250"
-          %ul
-          - @item.item_images.each do |item_image|
-            %li
-              = image_tag "#{item_image.src}",size: "70x70"
         .product-main__inner__box__list
           %table{:border=>'1'} 
             %thead
               %tr
                 %th 出品者
-                -# %td= @item.user.nickname
               %tr
                 %th カテゴリー
                 %td
@@ -57,13 +52,15 @@
           = ('¥' + @item.price.to_s(:delimited))
         .product-main__inner__box__price__tax (税込み)
         .product-main__inner__box__price__postage 送料込み
-      - if user_signed_in? && current_user.id == @item.user_id
-        //= button_to '編集', edit_item_path(@item.id), class: 'product-main__inner__box__edit'
+      - if user_signed_in? && current_user.id == @item.user.id
         = button_to "削除", item_path(@item.id), method: :delete, data: { confirm: "本当に削除しますか？" } , class: 'product-main__inner__box__delete'
-      - else
-        = button_to '購入画面に進む', '/', class:'product-main__inner__box__btn'
+      - elsif @item.buyer.present?
+        = button_to '売り切れました', root_path(@item), method: :get, class:'product-main__inner__box__btn'
+      - else 
+        = button_to '購入画面に進む', item_buyers_path(@item),method: :get, class:'product-main__inner__box__btn'
       .product-main__inner__box__descripton
         %p.product-main__inner__box__descripton__text
+        東京産
         期間限定
       .product-main__inner__box__report
         =button_to 'いいね', '/', class:'product-main__inner__box__report__left'
@@ -76,3 +73,4 @@
         = f.text_area :comment, class:'product-main__message__comment'
       = button_to 'コメントする', '/', class:'product-main__message__btn'
   = render "shared/footer"
+

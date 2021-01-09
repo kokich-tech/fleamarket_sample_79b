@@ -5,32 +5,55 @@
       .main__inner__purchase 購入内容の確認
       .main__inner__product
         .main__inner__product__image
-          =image_tag 'icon-02.png', size: '150x150', class:'photo'
+          =image_tag "#{@item.item_images[0].src}" ,size: '64×64',class:'buydetails__image'
         .main__inner__product__contents
-          .main__inner__product__contents__detaill Tシャツ今なら２０％OFF
+          -# .main__inner__product__contents__detaill Tシャツ今なら２０％OFF
+
           .main__inner__product__contents__price
             .main__inner__product__contents__price__tax-included 送料込み(税込み)
-            .main__inner__product__contents__price__sum ¥1,100
+            .main__inner__product__contents__price__sum 
+              ="¥#{@item.price.to_s}"
       .main__inner__payment
         .main__inner__payment__top
           .main__inner__payment__top__total 支払い金額
-          .main__inner__payment__top__sum ¥1100
+          .main__inner__payment__top__sum 
+            ="¥#{@item.price.to_s}"
       .main__inner__paymet-type
         .main__inner__paymet-type__box
-        支払方法
-        =link_to '登録してください', '/',class:'paymet-type__btn'
+          支払方法
+          .main__inner__paymet-type__update
+            = link_to '変更する',  new_card_path, class:'paymet-type__btn'
+          .main__inner__paymet-type__text
+          - if @default_card_information.blank?
+            %br /
+          - else
+            = "**** **** **** " + "#{@default_card_information.last4}"
+            %br
+            - exp_month = @default_card_information.exp_month.to_s
+            - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
+            = "有効期限 " + exp_month + " / " + exp_year
+            %br
+
       .main__inner__shipping-address
         .main__inner__shipping-address__box  
-        配送先
-        =link_to '登録してください', '/', class:'shipping-address__btn'
+          配送先
+          %br
+          =  "〒" + current_user.address.postal_code.to_s
+          %br
+          =current_user.address.prefecture
+          %br
+          = current_user.address.city 
+          %br
+          =current_user.address.house_number
+          %br 
+          =current_user.address.building
+
+        =link_to '変更する', '/', class:'shipping-address__btn'
       .main__inner__to-buy
         %p.main__inner__to-buy__text
         配送先と支払方法の入力を完了してください。
-        =button_to '購入する','/', class:'to-buy__btn'
+        = form_tag(action: :pay, method: :post, item_id: @item) do
+          =button_to '購入する',done_item_buyers_path(@item),method: :get, class:'to-buy__btn'
   =render partial:'footer'
 
-    
-
-
-
-
+  

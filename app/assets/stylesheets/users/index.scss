@@ -1,8 +1,139 @@
+// .mypage-wrapper {
+//   $base-blue: #3CCACE;
+//   $base-black: #333;
+//   $table-border-color: #dedede;
+
+// }
+// /* プロフィール */
+// .mypage {
+//   height: 1000px;
+//   width: 100%;
+  
+//   background-color: #f8f8f8;
+//   $base-blue: #3CCACE;
+//   $base-black: #333;
+//   $table-border-color: #dedede;
+
+ 
+
+
+//   .mymain {
+//     height: 1000px;
+//     padding: 50px 0;
+//     position: relative;
+//     .myleft {
+//       height: calc(100% - 10%);
+//       width: calc(100% - 75%);
+//       padding: 0 30px;
+//       float: left;
+//       ul {
+//         height: auto;
+//         width: 100%;
+//         background-color: white;
+        
+//         li {
+//           height: 50px;
+//           width: 95%;
+//           line-height: 50px;
+//           padding: 0 10px;
+//           border: 1px solid #f8f8f8;
+//           font-size: 14px;
+          
+//           cursor: pointer;
+//           a {
+//             position: relative;
+//             text-decoration: none;
+//             color: black;
+//           }
+//           .icon-possition {
+//             color: #b6b5b5bb;
+//             float: right;
+//             line-height: 50px;
+//             padding-right: 6px;
+//           }
+//         }
+//       }
+//       h3 {
+//         font-weight: bold;
+//         padding-top: 50px;
+//         padding-bottom: 5px;
+//         background-color: #f8f8f8;
+//       }
+//     }
+//     .myright {
+//       height: calc(100% - 10%);
+//       width: calc(100% - 30%);
+//       background-color:white;
+//       float: right;
+//       p {
+//         height: 50px;
+//         line-height: 50px;
+//         font-size: 20px;
+//         text-align: center;
+//         font-weight: bold;
+//         padding-top: 20px;
+//       }
+//       .right-top {
+//         height: 300px;
+//         &__bg-mask {
+//           height: 100%;
+//           background: rgba(255,255,255,0.5);
+//           padding-top: 20px;
+//           &--avatar {
+//             height: 200px;
+//             width: 200px;
+//             background-image: image-url('icon-01.png');
+//             background-size: cover;
+//             background-color: white;
+//             border-radius: 100px;
+//             margin: auto;
+//             border: 1px solid #f8f8f8;
+//           }
+//           &--nickname {
+//             width: 50%;
+//             background-color: white;
+//             margin: 10px auto;
+//             border-radius: 50px;
+//             border: 1px solid #f8f8f8;
+//           }
+//         }
+//       }
+//       .preface {
+//         padding: 20px;
+//         text-align: center;
+//         textarea {
+//           width: 750px;
+//           min-height: 300px;
+//           padding: 10px;
+//           margin-top: 10px;
+//           display: inline-block;
+//         }
+//       }
+//       .change-btn {
+//         width: auto;
+//         padding: 0 20%;
+//         text-align: center;
+//         button {
+//           display: inline-block;
+//           font-size: 18px;
+//           margin-top: 20px;
+//           line-height: 48px;
+//           background: $base-blue;
+//           border: 1px solid $base-blue;
+//           color: white;
+//           width: 250px;
+//           font-size: 18px;
+//           border-radius: 100px;
+//           cursor: pointer;
+//         }
+//       }
+//     }
+//   }
+// }
 .mypage-wrapper {
   $base-blue: #3CCACE;
   $base-black: #333;
   $table-border-color: #dedede;
-
 }
 /* プロフィール */
 .mypage {
@@ -13,10 +144,7 @@
   $base-blue: #3CCACE;
   $base-black: #333;
   $table-border-color: #dedede;
-
  
-
-
   .mymain {
     height: 1000px;
     padding: 50px 0;
@@ -129,513 +257,3 @@
       }
     }
   }
-}
-
-/* 新規登録 */
-.single-container{
-  .single-header {
-    background-color: #272727;
-    height: 128px;
-    display: flex;
-    justify-content: center;
-    &__logo {
-      margin: 40px 0 0;
-    }
-    &__progress {
-      padding: 40px 0 0 44px;
-      &__text {
-        position: relative;
-        &--active {
-          font-weight: 600px;
-          color: #3CCACE;
-          display: inline-block;
-          min-width: 60px;
-          margin: 0 40px 0 0;
-          font-size: 12px;
-          &__text {
-            margin-left: 5px;
-          }
-          .single-header__progress__round--blue {
-            background-color: #3CCACE;
-            width: 12px;
-            height: 12px;
-            margin: 8px auto 0;
-            border-radius: 50%;
-          }
-          .single-header__progress__round--blue::after {
-            position: absolute;
-            display: block;
-            z-index: 0;
-            bottom: 5px;
-            content: '';
-            height: 2px;
-            background: white;
-            width: 74px;
-            right: 66%;
-          }
-        }
-        &--tell {
-          font-weight: 600px;
-          color: white;
-          display: inline-block;
-          min-width: 60px;
-          margin: 0 40px 0 0;
-          font-size: 12px;
-        }
-        &--end {
-          font-weight: 600px;
-          color: white;
-          display: inline-block;
-          min-width: 60px;
-          margin: 0 40px 0 0;
-          font-size: 12px;
-          &__text {
-            margin-left: 18px;
-          }
-        }
-        .single-header__progress__round {
-          background-color: white;
-          width: 12px;
-          height: 12px;
-          margin: 8px auto 0;
-          border-radius: 50%;
-        }
-        .single-header__progress__round::after {
-          position: absolute;
-          display: block;
-          content: '';
-          bottom: 5px;
-          height: 2px;
-          width: 102px;
-          background: white;
-          left: 45%;
-        }
-        .single-header__progress__round::before {
-          position: absolute;
-          display: block;
-          content: '';
-          bottom: 5px;
-          height: 2px;
-          width: 38px;
-          background: white;
-          right: 57%;
-        }
-        // address
-        &_address--active {
-          font-weight: 600px;
-          color: #3CCACE;
-          display: inline-block;
-          min-width: 60px;
-          margin: 0 40px 0 0;
-          font-size: 12px;
-          &__text {
-            margin-left: 5px;
-          }
-          .single-header__progress_address__round--blue {
-            background-color: #3CCACE;
-            width: 12px;
-            height: 12px;
-            margin: 8px auto 0;
-            border-radius: 50%;
-          }
-          .single-header__progress_address__round--blue::after {
-            position: absolute;
-            display: block;
-            z-index: 0;
-            bottom: 5px;
-            content: '';
-            height: 2px;
-            background: #3CCACE;
-            width: 74px;
-            right: 66%;
-          }
-        }
-        &_address--tell {
-          font-weight: 600px;
-          color: #3CCACE;
-          display: inline-block;
-          min-width: 60px;
-          margin: 0 40px 0 0;
-          font-size: 12px;
-        }
-        .single-header__progress_address__round--blue_2 {
-          background-color: #3CCACE;
-          width: 12px;
-          height: 12px;
-          margin: 8px auto 0;
-          border-radius: 50%;
-        }
-        &_address--end {
-          font-weight: 600px;
-          color: white;
-          display: inline-block;
-          min-width: 60px;
-          margin: 0 40px 0 0;
-          font-size: 12px;
-          &__text {
-            margin-left: 18px;
-          }
-        }
-        .single-header__progress_address__round {
-          background-color: white;
-          width: 12px;
-          height: 12px;
-          margin: 8px auto 0;
-          border-radius: 50%;
-        }
-        .single-header__progress_address__round::after {
-          position: absolute;
-          display: block;
-          content: '';
-          bottom: 5px;
-          height: 2px;
-          width: 104px;
-          background: white;
-          left: 45%;
-        }
-        .single-header__progress_address__round::before {
-          position: absolute;
-          display: block;
-          content: '';
-          bottom: 5px;
-          height: 2px;
-          width: 38px;
-          background: #3CCACE;
-          right: 57%;
-        }
-        // complete
-        &_complete--active {
-          font-weight: 600px;
-          color: #3CCACE;
-          display: inline-block;
-          min-width: 60px;
-          margin: 0 40px 0 0;
-          font-size: 12px;
-          &__text {
-            margin-left: 5px;
-          }
-          .single-header__progress_complete__round--blue {
-            background-color: #3CCACE;
-            width: 12px;
-            height: 12px;
-            margin: 8px auto 0;
-            border-radius: 50%;
-          }
-          .single-header__progress_complete__round--blue::after {
-            position: absolute;
-            display: block;
-            z-index: 0;
-            bottom: 5px;
-            content: '';
-            height: 2px;
-            background: #3CCACE;
-            width: 74px;
-            right: 66%;
-          }
-        }
-        &_complete--tell {
-          font-weight: 600px;
-          color: #3CCACE;
-          display: inline-block;
-          min-width: 60px;
-          margin: 0 40px 0 0;
-          font-size: 12px;
-        }
-        &_complete--end {
-          font-weight: 600px;
-          color: #3CCACE;
-          display: inline-block;
-          min-width: 60px;
-          margin: 0 40px 0 0;
-          font-size: 12px;
-          &__text {
-            margin-left: 18px;
-          }
-        }
-        .single-header__progress_complete__round {
-          background-color: #3CCACE;
-          width: 12px;
-          height: 12px;
-          margin: 8px auto 0;
-          border-radius: 50%;
-        }
-        .single-header__progress_complete__round::after {
-          position: absolute;
-          display: block;
-          content: '';
-          bottom: 5px;
-          height: 2px;
-          width: 102px;
-          background: #3CCACE;
-          left: 45%;
-        }
-        .single-header__progress_complete__round::before {
-          position: absolute;
-          display: block;
-          content: '';
-          bottom: 5px;
-          height: 2px;
-          width: 38px;
-          background: #3CCACE;
-          right: 57%;
-        }
-      }
-    }
-  }
-  .single-main {
-    &_container {
-      width: 700px;
-      margin: 0 auto;
-      background: #fff;
-    }
-    .single-head_registration {
-      font-size: 22px;
-      padding: 32px;
-      text-align: center;
-      font-weight: 600;
-    }
-    .single-head_content{
-      max-width: 343px;
-      margin: 0 auto;
-      .form-group {
-        margin: 24px 0 0;
-        label {
-          font-weight: 600;
-          display: inline-block;
-        }
-        input {
-          display: block;
-          width: 100%;
-          margin: 8px 0 0;
-          padding: 10px 16px 8px;
-          border-radius: 4px;
-          border: 1px solid #ccc;
-          background: #fff;
-          line-height: 1.5;
-          font-size: 16px;
-        }
-        &__require {
-          background-color: #3CCACE;
-          margin: 0 0 0 8px;
-          padding: 2px 4px;
-          border-radius: 2px;
-          color: #fff;
-          font-size: 12px;
-        }
-        &__text{
-          display: block;
-          width: 100%;
-          margin: 8px 0 0;
-          padding: 10px 16px 8px;
-          border-radius: 4px;
-          border: 1px solid #ccc;
-          background: #fff;
-          line-height: 1.5;
-          font-size: 16px;
-        }
-        .birthday {
-          display: block;
-          width: 100%;
-          margin: 8px 0 0;
-          padding: 10px 16px 8px;
-          border-radius: 4px;
-          border: 1px solid #ccc;
-          background: #fff;
-          line-height: 1.5;
-          font-size: 16px;
-        }
-        select {
-          margin: 8px 0 0;
-          padding: 10px 16px 8px;
-          border-radius: 4px;
-          border: 1px solid #ccc;
-          background: #fff;
-          line-height: 1.5;
-          font-size: 16px;
-          cursor: pointer;
-        }
-        &__next {
-          margin: 24px 0 40px;
-          &__address {
-            display: block;
-            width: 100%;
-            font-weight: 600;
-            line-height: 48px;
-            font-size: 14px;
-            border-radius: 4px;
-            background: #3CCACE;
-            border: 1px solid #3CCACE;
-            color: #fff;
-            cursor: pointer;
-          }
-        }
-      }
-
-      .form-group__harf {
-        margin: 24px 0 0;
-        label {
-          font-weight: 600;
-          display: inline-block;
-        }
-        &__require {
-          background-color: #3CCACE;
-          margin: 0 0 0 8px;
-          padding: 2px 4px;
-          border-radius: 2px;
-          color: #fff;
-          font-size: 12px;
-        }
-        &__text {
-          display: block;
-          width: calc(50% - 6px);
-          width: 45%;
-          margin: 8px 8px 0 0;
-          padding: 10px 16px 8px;
-          border-radius: 4px;
-          border: 1px solid #ccc;
-          background: #fff;
-          line-height: 1.5;
-          font-size: 16px;
-        }
-      }
-    }
-  }
-  .single-footer {
-    background-color: #272727;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-    height: 150px;
-    padding: 40px 0;
-    text-align: center;
-    &__logo {
-      height: 65px;
-      margin: 40px auto 0;
-    }
-  }
-
-  .single-address-main {
-    &__container {
-      width: 700px;
-      margin: 0 auto;
-      background: #fff;
-      &__title{
-        font-size: 22px;
-        padding: 32px;
-        text-align: center;
-        font-weight: 600;
-      }
-      &__form__frame {
-        max-width: 343px;
-        margin: 0 auto;
-
-        .form-group {
-          margin: 24px 0 0;
-          label {
-            font-weight: 600;
-            display: inline-block;
-          }
-          &__require {
-            background-color: #3CCACE;
-            margin: 0 0 0 8px;
-            padding: 2px 4px;
-            border-radius: 2px;
-            color: #fff;
-            font-size: 12px;
-          }
-          &__optional {
-            background-color: #3CCACE;
-            margin: 0 0 0 8px;
-            padding: 2px 4px;
-            border-radius: 2px;
-            color: #fff;
-            font-size: 12px;
-          }
-          &__input {
-            display: block;
-            width: 100%;
-            margin: 8px 0 0;
-            padding: 10px 16px 8px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            background: #fff;
-            line-height: 1.5;
-            font-size: 16px;
-          }
-          &__prefecture {
-            display: block;
-            width: 100%;
-            margin: 8px 0 0;
-            padding: 10px 16px 8px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            background: #fff;
-            line-height: 1.5;
-            font-size: 16px;
-          }
-          select {
-            margin: 8px 0 0;
-            padding: 10px 16px 8px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            background: #fff;
-            line-height: 1.5;
-            font-size: 16px;
-            cursor: pointer;
-          }
-        }
-        .form-group__end {
-          margin: 24px 0 40px;
-          .btn-default__btn-blue {
-            display: block;
-            width: 100%;
-            font-weight: 600;
-            line-height: 48px;
-            font-size: 14px;
-            border-radius: 4px;
-            background: #3CCACE;
-            border: 1px solid #3CCACE;
-            color: #fff;
-            cursor: pointer;
-          }
-        }
-      }
-    }
-  }
-  .single-complete-main {
-    &__container {
-      width: 700px;
-      margin: 0 auto;
-      background: #fff;
-      height: calc(100vh - 358px);
-      &__title {
-        font-size: 22px;
-        padding: 50px;
-        text-align: center;
-        font-weight: 600;
-      }
-      &__form__frame {
-        font-size: 18px;
-        text-align: center;
-      }
-      .form-group__end {
-        margin: 100px 0 ;
-        text-align: center;
-        .box__btn-wrapper__back-btn {
-          margin: 0 auto;
-          display: block;
-          width: 40%;
-          line-height: 48px;
-          font-size: 14px;
-          border-radius: 4px;
-          background-color: #3CCACE;
-          border: 1px solid #3CCACE;
-          color: #fff;
-          cursor: pointer;
-          text-decoration: none;
-        }
-      }
-    }
-  }
-}

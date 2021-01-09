@@ -4,6 +4,7 @@
 
 @import "modules/signin";
 @import "modules/signup";
+@import "modules/new";
 @import "buyers/index";
 @import "buyers/done";
 @import "buyers/footer";
@@ -21,6 +22,9 @@
 @import "error";
 
 @import "users/index";
-@import "card";
+
+@import "card/new";
+@import "card/show";
+
 
 
