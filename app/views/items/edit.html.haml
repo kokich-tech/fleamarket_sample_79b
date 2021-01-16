@@ -28,7 +28,7 @@
           .image-box-1
             .item-num-0#image-box__container
             = f.fields_for :item_images do |i|
-              = i.file_field :src, type: 'file', id:"img-file", data: {index: i.index}, class:"test", style: "display:none"
+              = i.file_field :src, type: 'file',  data: {index: i.index}, class:"test", style: "display:none"
               %label{for: "img-file"}
               - if i.object.persisted?
                 = i.check_box :_destroy,  style: "display:none"

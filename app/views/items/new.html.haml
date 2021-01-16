@@ -19,7 +19,7 @@
           .image-box-1
             .item-num-0#image-box__container
             = f.fields_for :item_images do |i|
-              = i.file_field :src, type: 'file', id:"img-file", data: {index: i.index}, class:"test"
+              = i.file_field :src, type: 'file',  data: {index: i.index}, class:"test"
               %label{for: "img-file"}
 
       .box
