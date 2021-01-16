@@ -62,6 +62,8 @@
         = button_to "削除", item_path(@item.id), method: :delete, data: { confirm: "本当に削除しますか？" } , class: 'product-main__inner__box__delete'
       - elsif @item.buyer.present?
         = button_to '売り切れました', root_path(@item), method: :get, class:'product-main__inner__box__btn'
+      - elsif current_user.blank?
+        = button_to 'ログイン画面に移動',new_user_session_path, class:'product-main__inner__box__btn'
       - else 
         = button_to '購入画面に進む', item_buyers_path(@item),method: :get, class:'product-main__inner__box__btn'
       .product-main__inner__box__descripton
@@ -78,4 +80,3 @@
         = f.text_area :comment, class:'product-main__message__comment'
       = button_to 'コメントする', '/', class:'product-main__message__btn'
   = render "shared/footer"
-

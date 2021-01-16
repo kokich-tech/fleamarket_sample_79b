@@ -1,0 +1,52 @@
+.myright{
+  text-align: center;
+  padding-top: 50px;
+  .card{
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 2px solid rgb(245, 245, 245);
+
+  }
+
+  label{
+    // border-bottom: 1px solid rgb(245, 245, 245);
+    font-weight: bold;
+    letter-spacing: 15px;
+    font-size: 25px;
+  }
+
+  h1{
+    font-weight: bold;
+    letter-spacing: 15px;
+    font-size: 18px;
+  }
+
+  .number{
+    border: 2px solid #bbbbbb;
+    background-color: #bbbbbb;
+    margin: 10px 380px;
+    padding: 10px 0;
+  }
+
+  .date{
+    border: 2px solid #bbbbbb;
+    background-color: #bbbbbb;
+    margin: 10px 430px;
+    padding: 10px 0;
+  }
+
+  button{
+    display: inline-block;
+    font-size: 18px;
+    margin-top: 50px;
+    line-height: 48px;
+    background: #3CCACE;
+    border: 1px solid  #3CCACE;
+    color: white;
+    width: 250px;
+    font-size: 18px;
+    border-radius: 100px;
+    cursor: pointer;
+    margin-bottom: 25px;
+  }
+}
