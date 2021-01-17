@@ -12,22 +12,14 @@ document.addEventListener("turbolinks:load", (function(){
 
       
   $('.box__file__field').on('click', function(){
-
-    // const fileField = $('input[type="file"]:last');
     const fileField = $(".test:last");
     fileField.trigger('click');
-    console.log("1")
   })
 
-  $('.item-image__content').on('click', function(){
-    var index = $(this).data("index");
-    
-    // const fileField = $('input[type="file"]:last');
-    // const fileField = $(".test:last");
-    // fileField.trigger('click');
-
+  $('.item-image__content--icon').on('click', function(){
+    var index = $(this).parent().data("index");
+    console.log(index)
     $(`#item_item_images_attributes_${index}_src`).trigger("click");
-    console.log("2")
   })
 
 
@@ -38,7 +30,6 @@ document.addEventListener("turbolinks:load", (function(){
   $('.box__file').on('change', `input[type="file"]`, function(e) {
   //fileIndexの先頭の数字を使ってinputを作る
   let index = $(this).data("index");
-  console.log(index)
   $('.box__file').append(buildHTML(fileIndex[0]));
 
     fileIndex.shift();
@@ -55,7 +46,7 @@ document.addEventListener("turbolinks:load", (function(){
         fileReader.onloadend = function() {
         let src = fileReader.result
         
-        const edit_image = $(`.item-image__content[data-index="${index}"]`).children("img");
+        const edit_image = $(`.item-image__content[data-index="${index}"]`).find("img");
         edit_image.attr("src", src);
         
         }
@@ -87,7 +78,6 @@ document.addEventListener("turbolinks:load", (function(){
                     </div>
                   </div>`
         //要素の前にhtmlを差し込む
-        console.log(html)
         $('.box__file__img').before(html);
   
         
